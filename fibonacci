@@ -1,0 +1,28 @@
+// 14.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+ 
+using namespace std;
+void main()
+{
+ 	int n,i,f,r,a;
+	do{
+	cout<<"de el numero de la secuencia fibonacci que quiera obtener: "<<endl;
+	cin>>n;
+	}
+	while (n>1);
+	a=0;
+	r=0;
+	f=1;
+	for (i=0;i<n;i++)
+    {
+		r=f+a;
+		a=f;
+		f=r;
+	}
+	cout<<"su resultado es: "<<r<<endl; 
+	getch();
+}
