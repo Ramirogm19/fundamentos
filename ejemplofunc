@@ -1,0 +1,61 @@
+// ejercico.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+float calcper(float r);
+float calcarea(float r);
+float calcvol(float r);
+void main()
+
+{
+	float r,area;
+	int op;
+	
+	do{
+		cout<<"ingrese el radio:"<<endl;
+		cin>>r;
+		cout<<"1. calcular perimetro"<<endl;
+		cout<<"2. calcular area"<<endl;
+		cout<<"3. calcular volumen"<<endl;
+		cout<<"4. salir"<<endl;
+		cout<<"ingrese la opcion del 1-4"<<endl;
+		cin>>op;
+		switch(op){
+			case 1:area=calcper(r);
+				cout<<area;
+				break;
+			case 2:area=calcarea(r);
+				cout<<area;
+				break;
+			case 3:area=calcvol(r);
+				cout<<area;
+				break;
+			case 4:cout<<"salir"<<endl;
+				break;
+			default:cout<<"error"<<endl;
+				break;
+		}
+		}while (op!=4);
+	getch();
+}
+  
+
+float calcper(float r)
+{    
+	return 2*r*3.142592;}
+float calcarea(float r)
+{   float aux;
+	aux=r*r*3.142592;
+	return aux;}
+float calcvol(float r)
+{   float v;
+	v=(4/3*3.142592*r*r*r);
+	return v;}
+
+
+
+
