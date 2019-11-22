@@ -1,0 +1,59 @@
+// pregunta1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+float areac (float l);
+float areat (float l);
+float areas (float l);
+
+void main()
+{
+	int op,t;
+	
+		cout<<"1.sacar area del cuadrado"<<endl;
+		cout<<"2.sacar area del triangulo"<<endl;
+		cout<<"3.sacar area sombreado"<<endl;
+		cout<<"4.salir"<<endl;
+		
+	do{
+		cin>>op;
+	switch(op)
+	{
+		case 1:cin>>t;cout<<areac(t); break;
+		case 2:cin>>t;cout<<areat(t); break;
+		case 3:cin>>t;cout<<areas(t); break;
+		case 4:cout<<"fin"; break;
+		default:cout<<"error"; break;
+	}
+	}
+			while(op!=4);
+				getch();
+
+
+	}
+
+
+float areac (float l)
+{
+	int aux;
+aux=l*l;
+return aux;
+}
+
+float areat (float l)
+{
+	int aux;
+aux=l*(l/2);
+return aux;
+}
+
+float areas (float l)
+{
+	int aux;
+aux=l*(l/2);
+return aux;
+}
