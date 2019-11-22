@@ -1,0 +1,62 @@
+// pregunta3.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+int digito (int n);
+int seriesuma (int m);
+int serieprod (int m);
+
+void main()
+
+{
+	int op,x,y;
+	do{
+		cout<<"-------menu---------"<<endl;
+		cout<<"1.sacar el primer digito"<<endl;
+		cout<<"2.serie numeros pares sumar"<<endl;
+		cout<<"3.serie numeros pares multiplicar"<<endl;
+		cout<<"4.salir"<<endl;
+		cin>>op;
+		switch(op){
+		case 1:cin>>x;cout<<digito(x); break;
+		case 2:cin>>y;cout<<seriesuma(y); break;
+		case 3:cin>>y;cout<<serieprod(y); break;
+		case 4:cout<<"fin"; break;
+		default:cout<<"error"; break;}
+	}while(op!=4);
+	getch();
+}
+
+int digito (int n)
+{
+	int aux;
+	while(n>0)
+	{
+		aux=n%10;
+		n=n/10;}
+	return n;
+}
+
+	int seriesuma (int m)
+{
+	int aux=0;
+	for (int i=1;i<=m;i++)
+	{
+		aux=aux+(i*2);
+	}
+	return m;
+}
+
+int serieprod (int m)
+{
+	int aux=0;
+	for (int i=1;i<=m;i++)
+	{
+		aux=aux*(i*2);
+	}
+	return m;
+}
