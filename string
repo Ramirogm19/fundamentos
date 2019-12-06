@@ -1,0 +1,31 @@
+// string.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string revertir(string nombretotal);
+
+void main()
+{
+int pos,longitud;
+	string nombreall,aux;
+	cout<<"ingrese nombre y apellido"<<endl;
+	getline(cin,nombreall);
+	aux=revertir(nombreall);
+	cout<<"el nombre es: "<<aux;
+	getch();
+}
+
+string revertir(string nombreall)
+{	string aux;
+int pos,longitud;
+	longitud=nombreall.length();
+	pos=nombreall.find(' ');
+	aux=nombreall.substr(pos+1,longitud)+" "+nombreall.substr(0,pos+1);
+return aux;
+}
